@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Admin | Gestión ElectroFind</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-size: 0.9rem;
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            background-color: #343a40;
+            color: white;
+            height: 100vh;
+            position: fixed;
+            width: 250px;
+        }
+        .sidebar a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            color: white;
+            background-color: rgba(255,255,255,0.1);
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 25px;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+            margin-bottom: 20px;
+        }
+        .settings-card {
+            border-left: 4px solid #0d6efd;
+        }
+        .content-card {
+            border-left: 4px solid #198754;
+        }
+        .media-card {
+            border-left: 4px solid #ffc107;
+        }
+        .badge-admin {
+            font-size: 0.75em;
+            background-color: #6c757d;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .main-content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex">
+        <div class="sidebar p-3">
+            <h4 class="mb-4">Gestión ElectroFind</h4>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                    <a href="#" class="nav-link active">
+                        <i class="fas fa-cog me-2"></i> Configuración
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-file-alt me-2"></i> Páginas
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-boxes me-2"></i> Catálogo
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-paint-brush me-2"></i> Diseño
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-users-cog me-2"></i> Administradores
+                    </a>
+                </li>
+                <li class="nav-item mt-4">
+                    <a href="index.html" class="nav-link text-warning">
+                        <i class="fas fa-sign-out-alt me-2"></i> Cerrar sesión
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main-content flex-grow-1">
+            <div class="d-flex justify-content-between mb-4 align-items-center">
+                <h2><i class="fas fa-cog me-2"></i> Configuración del Sitio</h2>
+                <div>
+                    <span class="me-3"><b>Admin</b></span>
+                    <button class="btn btn-sm btn-primary">
+                        <i class="fas fa-save me-1"></i> Guardar cambios
+                    </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card p-3 settings-card">
+                        <h5 class="mb-3"><i class="fas fa-globe me-2"></i> Información del Sitio</h5>
+                        <div class="mb-3">
+                            <label class="form-label">Nombre del sitio</label>
+                            <input type="text" class="form-control" value="ElectroFind">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Eslogan</label>
+                            <textarea class="form-control" rows="2">Tecnologia al alcance de un clic</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">URL principal</label>
+                            <input type="text" class="form-control" value="https://electrofind.com">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card p-3 settings-card">
+                        <h5 class="mb-3"><i class="fas fa-envelope me-2"></i> Configuración de Email</h5>
+                        <div class="mb-3">
+                            <label class="form-label">Email de contacto</label>
+                            <input type="email" class="form-control" value="electro.find@gmail.com">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Teléfonos</label>
+                            <input type="email" class="form-control" value="+52 123 456 78 90">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Horario de atención</label>
+                            <input type="text" class="form-control" value="Lunes a Viernes: 9:00 - 18:00 hrs / Sábados: 9:00 - 14:00 hrs">
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

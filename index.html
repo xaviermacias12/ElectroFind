@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrofind - Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .card {
+            border-radius: 15px;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: #0d6efd;
+            border: none;
+            padding: 10px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+            transform: translateY(-2px);
+        }
+
+        .form-control {
+            padding: 12px 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+            border-color: #86b7fe;
+        }
+
+        .bg-primary {
+            background-color: #cacbcc;
+            background: linear-gradient(135deg, #cacbcc 0%, #cacbcc 100%);
+        }
+
+        .form-check-input:checked {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+
+        a {
+            color: #0d6efd;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #0b5ed7;
+            text-decoration: underline;
+        }
+
+        #togglePassword {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #togglePassword:hover {
+            background-color: #e9ecef;
+        }
+
+        .img-fluid {
+            transition: transform 0.3s ease;
+        }
+
+        .img-fluid:hover {
+            transform: scale(1.05);
+        }
+
+        .form-text {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+
+
+        @media (max-width: 992px) {
+            body {
+                background-color: white;
+            }
+
+            .card {
+                box-shadow: none;
+                border: 1px solid #dee2e6;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <div class="container-fluid vh-100">
+        <div class="row h-100">
+            <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center bg-primary">
+                <div class="text-center text-white p-5">
+                    <img src="imagenes/imagenheader/Logo.png" alt="Electrofind Logo" class="img-fluid mb-4"
+                        style="max-height: 150px;">
+                    <h1 class="display-4 fw-bold mb-3">Bienvenido a ElectroFind</h1>
+                    <p class="lead">Inicia sesion y accede al mejor sitio de ofertas tecnológicas</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                <div class="card shadow-lg p-4" style="width: 100%; max-width: 450px;">
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <img src="imagenes/imagenheader/Icono campo.png" alt="Icono de usuario" class="img-fluid"
+                                style="max-height: 80px;">
+                        </div>
+
+                        <h2 class="text-center mb-4">Iniciar Sesión</h2>
+
+                        <form id="loginForm">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Usuario</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    <input type="text" class="form-control" id="username"
+                                        placeholder="Ingresa tu usuario" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Contraseña</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                    <input type="password" class="form-control" id="password" placeholder="**********"
+                                        required>
+                                    <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">Recordarme</label>
+                                </div>
+                                <a href="recuperar.html" class="text-decoration-none">¿Olvidaste tu contraseña?</a>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100 py-2 mb-3">
+                                <i class="fas fa-sign-in-alt me-2"></i>Iniciar Sesión
+                            </button>
+
+                            <div class="text-center mt-3">
+                                <p>¿No tienes una cuenta? <a href="registro.html" class="text-decoration-none">Crear
+                                        cuenta</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const loginForm = document.getElementById('loginForm');
+            const usernameInput = document.getElementById('username');
+            const passwordInput = document.getElementById('password');
+            const togglePassword = document.getElementById('togglePassword');
+            const submitBtn = loginForm.querySelector('button[type="submit"]');
+
+            const regexUsername = /^[a-zA-Z0-9._-]{3,20}$/;
+            const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+
+            function showError(input, message) {
+                const formGroup = input.closest('.mb-3');
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'text-danger mt-2 small';
+                errorDiv.textContent = message;
+
+                const existingError = formGroup.querySelector('.text-danger');
+                if (existingError) {
+                    existingError.remove();
+                }
+
+                formGroup.appendChild(errorDiv);
+                input.classList.add('is-invalid');
+            }
+
+            function clearError(input) {
+                const formGroup = input.closest('.mb-3');
+                const errorDiv = formGroup.querySelector('.text-danger');
+                if (errorDiv) {
+                    errorDiv.remove();
+                }
+                input.classList.remove('is-invalid');
+            }
+
+            togglePassword.addEventListener('click', function () {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                this.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
+            });
+
+            usernameInput.addEventListener('input', function () {
+                clearError(this);
+            });
+
+            passwordInput.addEventListener('input', function () {
+                clearError(this);
+            });
+
+            loginForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                let isValid = true;
+
+                clearError(usernameInput);
+                clearError(passwordInput);
+
+                const username = usernameInput.value.trim();
+                if (!username) {
+                    showError(usernameInput, 'Por favor ingresa tu usuario');
+                    isValid = false;
+                } else if (!regexUsername.test(username)) {
+                    showError(usernameInput, 'El usuario debe tener entre 3 y 20 caracteres');
+                    isValid = false;
+                }
+
+                const password = passwordInput.value.trim();
+                if (!password) {
+                    showError(passwordInput, 'Por favor ingresa tu contraseña');
+                    isValid = false;
+                } else if (!regexPassword.test(password)) {
+                    showError(passwordInput, 'La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula y un número');                    isValid = false;
+                }
+
+                if (!isValid) return;
+
+                simulateLogin(username, password);
+            });
+
+            function simulateLogin(username, password) {
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Iniciando...';
+                submitBtn.disabled = true;
+
+                setTimeout(function () {
+                    const isAdmin = (username === 'admin' && password === 'admin123');
+
+                    if (isAdmin) {
+                        window.location.href = 'panel.html'; 
+                    } else {
+                        window.location.href = 'inicio.html';
+                    }
+
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }, 1500);
+            }
+        });
+    </script>
+</body>
+
+</html>

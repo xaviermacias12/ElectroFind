@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras | ElectroFind</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="productos.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <div class="container-fluid px-0 flex-grow-1">
+        <header class="header sticky-top">
+            <div class="custom-header">
+                <div class="container py-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="inicio.html" class="navbar-brand">
+                            <img src="imagenes/imagenheader/Logo.png" alt="ElectroFind Logo" class="logo-img">
+                        </a>
+
+                        <div class="d-flex align-items-center">
+                            <div class="input-group me-3 d-none d-lg-flex" style="width: 300px;">
+                                <input type="text" class="form-control" placeholder="Buscar en ElectroFind">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+
+                            <div class="d-lg-none">
+                                <button class="btn btn-link text-white search-toggle" type="button">
+                                    <i class="fas fa-search"></i>
+                                </button>
+
+                                <button class="btn btn-link text-white ms-2" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offCanvas">
+                                    <img src="imagenes/imagenheader/usuario.jpg" alt="Usuario"
+                                        class="rounded-circle user-img-mobile">
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="mobile-search-container">
+                            <div class="container-fluid">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Buscar en ElectroFind">
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse centered-nav" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a href="inicio.html" class="nav-link">INICIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="catalogo.html" class="nav-link">CATÁLOGO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="blogs.html" class="nav-link">BLOGS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="nosotros.html" class="nav-link">SOBRE NOSOTROS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="contacto.html" class="nav-link">CONTACTO</a>
+                            </li>
+                        </ul>
+
+                        <div class="d-none d-lg-block ms-3">
+                            <button class="btn btn-link text-white" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offCanvas">
+                                <img src="imagenes/imagenheader/usuario.jpg" alt="Usuario" class="rounded-circle"
+                                    style="width: 40px; height: 40px; object-fit: cover;">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offCanvas">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">Menú de usuario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <a href="carrito.html" class="text-decoration-none text-dark">
+                            <i class="fas fa-shopping-cart me-2"></i> Mi carrito
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="index.html" class="text-decoration-none text-dark">
+                            <i class="fas fa-sign-out-alt me-2"></i> Cerrar sesión
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <main class="container my-5 pb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="display-5 fw-bold mb-4">Tu Carrito</h1>
+
+                    <div id="cartItems" class="mb-4">
+                        <!-- Los productos se cargan aquí con JavaScript -->
+                    </div>
+
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h2 class="h4 mb-0">Total</h2>
+                                <span id="cartTotal" class="h3 text-primary">$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="btn btn-primary flex-grow-1 py-3">
+                            <i class="fas fa-credit-card me-2"></i>Pagar ahora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="bg-dark text-white py-5 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <h5>Sigue a ElectroFind en nuestras redes sociales</h5>
+                    <div class="d-flex justify-content-center justify-content-md-start gap-3 my-3">
+                        <a href="https://www.facebook.com/" class="text-white" aria-label="Facebook">
+                            <i class="fab fa-facebook-f fa-lg"></i>
+                        </a>
+                        <a href="https://x.com/" class="text-white" aria-label="Twitter">
+                            <i class="fab fa-twitter fa-lg"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" class="text-white" aria-label="Instagram">
+                            <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                    </div>
+                    <a href="mailto:electro.find@gmail.com" class="text-white text-decoration-none">
+                        electro.find@gmail.com
+                    </a>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-4 mt-md-0">
+                    <p>Copyright © 2025 ElectroFind</p>
+                    <p>Todos los derechos reservados</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cartItemsContainer = document.getElementById('cartItems');
+            const cartTotalElement = document.getElementById('cartTotal');
+
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            function renderCart() {
+                if (cart.length === 0) {
+                    cartItemsContainer.innerHTML = `
+                        <div class="alert alert-info">
+                            <i class="fas fa-shopping-cart me-2"></i> Tu carrito está vacío
+                        </div>
+                    `;
+                    cartTotalElement.textContent = '$0.00';
+                    return;
+                }
+
+                let html = '';
+                let total = 0;
+
+                cart.forEach((item, index) => {
+                    total += item.price * item.quantity;
+
+                    html += `
+                        <div class="card shadow-sm mb-3">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-2">
+                                        <img src="${item.image}" alt="${item.name}" class="img-fluid rounded">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h3 class="h5">${item.name}</h3>
+                                        <p class="text-primary fw-bold">$${item.price.toLocaleString('es-MX')}</p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input type="number" min="1" value="${item.quantity}" 
+                                            class="form-control quantity-input" data-index="${index}">
+                                    </div>
+                                    <div class="col-md-2 text-end">
+                                        <button class="btn btn-outline-danger remove-item" data-index="${index}">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                cartItemsContainer.innerHTML = html;
+                cartTotalElement.textContent = `$${total.toLocaleString('es-MX')}`;
+
+                document.querySelectorAll('.quantity-input').forEach(input => {
+                    input.addEventListener('change', function () {
+                        const index = this.dataset.index;
+                        const newQuantity = parseInt(this.value);
+
+                        if (newQuantity > 0) {
+                            cart[index].quantity = newQuantity;
+                            localStorage.setItem('cart', JSON.stringify(cart));
+                            renderCart();
+                        }
+                    });
+                });
+
+                document.querySelectorAll('.remove-item').forEach(button => {
+                    button.addEventListener('click', function () {
+                        const index = this.dataset.index;
+                        cart.splice(index, 1);
+                        localStorage.setItem('cart', JSON.stringify(cart));
+                        renderCart();
+
+                        const event = new Event('cartUpdated');
+                        document.dispatchEvent(event);
+                    });
+                });
+            }
+
+            renderCart();
+
+            document.addEventListener('cartUpdated', function () {
+                cart = JSON.parse(localStorage.getItem('cart')) || [];
+                renderCart();
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple iPad Air II | ElectroFind</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="productos.css">
+</head>
+
+<body>
+    <div class="container-fluid px-0">
+        <header class="header sticky-top">
+            <div class="custom-header">
+                <div class="container py-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="inicio.html" class="navbar-brand">
+                            <img src="imagenes/imagenheader/Logo.png" alt="ElectroFind Logo" class="logo-img">
+                        </a>
+
+                        <div class="d-flex align-items-center">
+                            <div class="input-group me-3 d-none d-lg-flex" style="width: 300px;">
+                                <input type="text" class="form-control" placeholder="Buscar en ElectroFind">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+
+                            <div class="d-lg-none">
+                                <button class="btn btn-link text-white search-toggle" type="button">
+                                    <i class="fas fa-search"></i>
+                                </button>
+
+                                <button class="btn btn-link text-white ms-2" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offCanvas">
+                                    <img src="imagenes/imagenheader/usuario.jpg" alt="Usuario"
+                                        class="rounded-circle user-img-mobile">
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="mobile-search-container">
+                            <div class="container-fluid">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Buscar en ElectroFind">
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse centered-nav" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a href="inicio.html" class="nav-link">INICIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="catalogo.html" class="nav-link active" aria-current="page">CATÁLOGO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="blogs.html" class="nav-link">BLOGS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="nosotros.html" class="nav-link">SOBRE NOSOTROS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="contacto.html" class="nav-link">CONTACTO</a>
+                            </li>
+                        </ul>
+
+                        <div class="d-none d-lg-block ms-3">
+                            <button class="btn btn-link text-white" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offCanvas">
+                                <img src="imagenes/imagenheader/usuario.jpg" alt="Usuario" class="rounded-circle"
+                                    style="width: 40px; height: 40px; object-fit: cover;">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offCanvas">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">Menú de usuario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <a href="carrito.html" class="text-decoration-none text-dark">
+                            <i class="fas fa-shopping-cart me-2"></i> Mi carrito
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="index.html" class="text-decoration-none text-dark">
+                            <i class="fas fa-sign-out-alt me-2"></i> Cerrar sesión
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <main class="container my-5">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="border rounded-3 p-3 shadow-sm">
+                        <img src="imagenes/productos/tablets/ipad.jpg" alt="Apple iPad Air II" class="img-fluid rounded"
+                            id="imagenPrincipal">
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="product-info">
+                        <h1 class="display-5 fw-bold mb-3">Apple iPad Air II</h1>
+
+                        <div class="mb-4">
+                            <span class="h3 text-primary">$28,999.00</span>
+                        </div>
+
+                        <div class="especificaciones-principales mb-4">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><strong>Pantalla:</strong> Retina 10.9" Liquid Retina</li>
+                                <li class="mb-2"><strong>Chip:</strong> Apple M1 con Neural Engine</li>
+                                <li class="mb-2"><strong>Almacenamiento:</strong> 256GB</li>
+                                <li class="mb-2"><strong>Conectividad:</strong> Wi-Fi 6 + Cellular (5G)</li>
+                                <li class="mb-2"><strong>Cámara frontal:</strong> 12MP Ultra Wide con Center Stage</li>
+                                <li class="mb-2"><strong>Sistema operativo:</strong> iPadOS 16</li>
+                            </ul>
+                        </div>
+
+                        <div class="d-flex gap-3 mb-4">
+                            <button id="addToCart" class="btn btn-outline-primary flex-grow-1 py-3">
+                                <i class="fas fa-shopping-cart me-2"></i>Añadir al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h2 class="h3 mb-4">Especificaciones completas</h2>
+                            <div class="row">
+                                <div class="col-md-6 col-lg-3 mb-4">
+                                    <h3 class="h5 text-primary">Pantalla</h3>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><strong>Tipo:</strong> Liquid Retina IPS LCD</li>
+                                        <li class="mb-2"><strong>Tamaño:</strong> 10.9 pulgadas</li>
+                                        <li class="mb-2"><strong>Resolución:</strong> 2360 x 1640 px</li>
+                                        <li class="mb-2"><strong>Brillo máximo:</strong> 500 nits</li>
+                                        <li class="mb-2"><strong>Recubrimiento:</strong> Anti-reflejo</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-md-6 col-lg-3 mb-4">
+                                    <h3 class="h5 text-primary">Rendimiento</h3>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><strong>Chip:</strong> Apple M1</li>
+                                        <li class="mb-2"><strong>CPU:</strong> 8 núcleos (4 performance + 4 efficiency)
+                                        </li>
+                                        <li class="mb-2"><strong>GPU:</strong> 8 núcleos</li>
+                                        <li class="mb-2"><strong>Neural Engine:</strong> 16 núcleos</li>
+                                        <li class="mb-2"><strong>Almacenamiento:</strong> 256GB</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-md-6 col-lg-3 mb-4">
+                                    <h3 class="h5 text-primary">Cámara y Audio</h3>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><strong>Cámara trasera:</strong> 12MP f/1.8</li>
+                                        <li class="mb-2"><strong>Cámara frontal:</strong> 12MP Ultra Wide</li>
+                                        <li class="mb-2"><strong>Video:</strong> 4K@60fps, 1080p@240fps</li>
+                                        <li class="mb-2"><strong>Audio:</strong> Altavoces estéreo</li>
+                                        <li class="mb-2"><strong>Micrófonos:</strong> Doble micrófono</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-md-6 col-lg-3 mb-4">
+                                    <h3 class="h5 text-primary">Batería y Conectividad</h3>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><strong>Capacidad:</strong> 28.6 Wh</li>
+                                        <li class="mb-2"><strong>Autonomía:</strong> Hasta 10 horas</li>
+                                        <li class="mb-2"><strong>Conectividad:</strong> Wi-Fi 6, Bluetooth 5.0</li>
+                                        <li class="mb-2"><strong>Cellular:</strong> 5G (modelos compatibles)</li>
+                                        <li class="mb-2"><strong>Puerto:</strong> USB-C</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h2 class="h3 mb-4">También te puede interesar</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 shadow-sm">
+                                <img src="imagenes/productos/smartphones/xioami.jpg" class="card-img-top"
+                                    alt="iPhone 15 Pro">
+                                <div class="card-body">
+                                    <h3 class="h5 card-title">Xiaomi 14T Pro</h3>
+                                    <p class="card-text text-primary fw-bold">$13,999.00</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-top-0">
+                                    <a href="xioami.html" class="btn btn-outline-primary w-100">Ver producto</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 shadow-sm">
+                                <img src="imagenes/productos/smartphones/poco.jpg" class="card-img-top"
+                                    alt="Google Pixel 7 Pro">
+                                <div class="card-body">
+                                    <h3 class="h5 card-title">POCO F5 Pro</h3>
+                                    <p class="card-text text-primary fw-bold">$10,999.00</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-top-0">
+                                    <a href="poco.html" class="btn btn-outline-primary w-100">Ver producto</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 shadow-sm">
+                                <img src="imagenes/productos/smartphones/samsung.jpg" class="card-img-top"
+                                    alt="Samsung Galaxy S23 Ultra">
+                                <div class="card-body">
+                                    <h3 class="h5 card-title">Samsung Galaxy S23 Ultra</h3>
+                                    <p class="card-text text-primary fw-bold">$24,999.00</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-top-0">
+                                    <a href="samsung.html" class="btn btn-outline-primary w-100">Ver producto</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer bg-dark text-white py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        <h5>Sigue a ElectroFind en nuestras redes sociales</h5>
+                        <div class="d-flex justify-content-center justify-content-md-start gap-3 my-3">
+                            <a href="https://www.facebook.com/" class="text-white" aria-label="Facebook">
+                                <i class="fab fa-facebook-f fa-lg"></i>
+                            </a>
+                            <a href="https://x.com/" class="text-white" aria-label="Twitter">
+                                <i class="fab fa-twitter fa-lg"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" class="text-white" aria-label="Instagram">
+                                <i class="fab fa-instagram fa-lg"></i>
+                            </a>
+                        </div>
+                        <a href="mailto:electro.find@gmail.com" class="text-white text-decoration-none">
+                            electro.find@gmail.com
+                        </a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end mt-4 mt-md-0">
+                        <p>Copyright © 2025 ElectroFind</p>
+                        <p>Todos los derechos reservados</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchToggle = document.querySelector('.search-toggle');
+            const mobileSearch = document.querySelector('.mobile-search-container');
+
+            if (searchToggle && mobileSearch) {
+                searchToggle.addEventListener('click', function () {
+                    if (mobileSearch.style.display === 'block') {
+                        mobileSearch.style.display = 'none';
+                    } else {
+                        mobileSearch.style.display = 'block';
+                        mobileSearch.querySelector('input').focus();
+                    }
+                });
+                document.addEventListener('click', function (e) {
+                    if (!e.target.closest('.mobile-search-container') &&
+                        !e.target.closest('.search-toggle') &&
+                        mobileSearch.style.display === 'block') {
+                        mobileSearch.style.display = 'none';
+                    }
+                });
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const currentProduct = {
+                id: 'apple-ipad-air', 
+                name: 'Apple iPad Air II',
+                price: 28999.00,
+                image: 'imagenes/productos/tablets/ipad.jpg',
+                quantity: 1
+            };
+
+            const addToCartBtn = document.getElementById('addToCart');
+            const cartLink = document.querySelector('a[href="carrito.html"]');
+
+            function updateCartCounter() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+
+                if (cartLink) {
+                    cartLink.innerHTML = `<i class="fas fa-shopping-cart me-2"></i> Mi carrito (${totalItems})`;
+                }
+            }
+
+            function addToCart() {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                const existingProductIndex = cart.findIndex(item => item.id === currentProduct.id);
+
+                if (existingProductIndex !== -1) {
+                    cart[existingProductIndex].quantity += 1;
+                } else {
+                    cart.push(currentProduct);
+                }
+
+                localStorage.setItem('cart', JSON.stringify(cart));
+
+                alert(`${currentProduct.name} se ha añadido al carrito`);
+
+                updateCartCounter();
+            }
+
+            if (addToCartBtn) {
+                addToCartBtn.addEventListener('click', addToCart);
+            }
+
+            updateCartCounter();
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
